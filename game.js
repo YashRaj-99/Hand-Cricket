@@ -20,7 +20,7 @@ var compwinmsg=document.getElementById('compwinmsg');
 var user,computer,target=Number(localStorage.getItem('target')),userScore=Number(localStorage.getItem('UserScore')),ComputerScore=Number(localStorage.getItem('CompScore'));
 //Batting Status
 battingStatus.innerHTML=localStorage.getItem('batting')+" Batting";
-document.getElementById('player1Score').innerHTML=localStorage.getItem('target');
+document.getElementById('player1Score').innerHTML=(localStorage.getItem('target')=="-1")? "&nbsp;-":localStorage.getItem('target');
 console.log("User Score: "+userScore+"\nComputer Score is : "+ComputerScore+"\nTarget is: "+ target);
 var imgs=['images/one.jpg','images/two.jpg','images/three.jpg','images/four.jpg','images/five.jpg','images/six.jpg'];
 for(let i=0;i<run.length;i++)
@@ -123,8 +123,17 @@ function gameOver()
        }
   
     }
-    else if(score>target&&localStorage.getItem('batting')=="Computer")
-    alert("");
+    else 
+    {
+        if(localStorage.getItem("batting")=="Computer")
+      { usrwinmsg.innerHTML="User is the Winner!!!<br>Score of User: "+score+"<br>Target by Computer was: "+target+"<br>Wait for 5 seconds to Start New Game";
+       userwin.style.visibility="visible";}
+       else
+       {
+           compwinmsg.innerHTML="Computer is the Winner!!!<br>Score of Computer: "+score+"<br>Target by User was: "+target+"<br>Wait for 5 seconds to Start New Game";
+           compwin.style.visibility="visible";
+       }
+    }
     setTimeout( function(){location.replace("index.html");},5000);
     
 
