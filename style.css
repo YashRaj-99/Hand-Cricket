@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+html{font-size: 60%;}
+@media(max-width:998px)
+{
+html{font-size:55%;}
+}
+@media(max-width:768px)
+{
+    html{font-size:45%;}
+
+}
+@media(max-width:510px)
+{
+    html{font-size:35%;}
+}
+@media(max-width:450px)
+{
+    html{font-size:30%;}
+}
+h1{
+    text-align: center;
+    border: 0.2rem solid rgb(0, 0, 0);
+    background-color: rgba(253, 0, 0, 0.315);
+    padding: 1.0rem;
+    margin-bottom: 2.0rem;
+    font-size: 4rem;
+}
+body{
+    background-image: url("images/bg3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.overs{
+    border:0.2rem solid black;
+    border-radius: 2rem;
+    display: inline-block;
+    padding: 2.0rem;
+    font-size: 3.0rem;
+    margin-bottom: 2.0rem;
+}
+select{
+    border-radius: 1.0rem;
+    font-size: 2.8rem;
+    background-color: rgba(147, 255, 85, 0.486);
+}
+option{
+    font-size: 2.5rem;
+    background-color: rgba(147, 255, 85, 0.486);
+}
+.modal{
+    visibility:hidden;
+    border:0.2rem solid black;
+    background-color: rgba(172, 255, 47, 0.575);
+    border-radius: 2.0rem;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+    font-size: 3.5rem;
+    color: rgb(132, 1, 255);
+}
+.modal button{
+    background-color: rgba(255, 0, 0, 0.582);
+}
+.modal button:hover{
+    background-color: black;
+    color: red;
+}
+.btn{
+    border: .2rem solid black;
+    /* display: inline-block; */
+    font-size:3rem;
+    border-radius: 1rem;
+    padding: 1.0rem;
+}
+
+.btn:hover,.close:hover{
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+}
+.close{
+    padding: 0.5rem;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+.close:hover{
+    transition-duration: 0.3s;
+    background-color:rgba(255, 0, 0, 0.781);
+    color:rgba(0, 0, 0, 0.774);
+}
+/* .resultdisp{
+    border: 2rem solid black;
+    position: absolute;
+    padding: 20rem;
+    font-size: 200rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+} */
+.action{
+    /* border: 2rem solid black; */
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    transform: translateY(-20%);
+}
+.resultdisp,.userplay,.compplay{
+    display: inline-block;
+}
+.userplay{
+    /* border: 2rem solid black; */
+    margin-left: 5.0rem;
+    width: 25.0rem;
+    float: left;
+}
+.userplay img, .compplay img{
+    width: 20.0rem;
+    height: 20.0rem;
+}
+.compplay{
+    margin-right: 5.0rem;
+    /* border: 2rem solid black; */
+    width: 25.0rem;
+    float: right;
+}
+.resultdisp{
+    /* border: 0.2rem solid black; */
+    /* width: 20.0rem; */
+    font-size: 20.0rem;
+}
+/* .scoredisp{
+    border: 0.2rem solid black;
+    float: left;
+    font-size: 5.0rem;
+}  */
+.scoring{
+    float: left;
+    font-size: 4rem;
+    /* border: 0.2rem solid black; */
+    text-align: left;
+}
+#player1Score{
+    display: inline-block;
+}
+/* .oversdisp,.ballsdisp{
+    border: 2rem solid black;
+    /* display: inline-block; */
+    /* float: right; */
+    /* }  */
+    .ob{
+        float: right;
+        font-size:4rem;
+        /* border: 0.2rem solid black; */
+    }
+    .rungrid{
+        position: absolute;
+        /* border: 2rem solid black; */
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    font-size: 5.0rem;
+    width: 100%;
+}
+.run{
+    border: 0.2rem solid black;
+    padding: 0.5rem;
+    background-color: cornflowerblue;
+    border-radius: 1.0rem;
+    margin: 1.0rem;
+    font-size:4rem;
+}
+.run:hover{
+    cursor: pointer;
+    font-size: 5.5rem;
+}
+.playermsg{
+    font-size: 3rem;
+}
+#batting
+{
+    display: inline-block;
+    font-size: 4rem;
+    text-decoration: underline;
+}

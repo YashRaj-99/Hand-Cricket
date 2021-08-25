@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Cricket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to the Hand Cricket Game</h1>
+    <div class="overs">
+        Number of Overs : 
+        <select name="overs" id="overSel">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="Unlimited">Unlimited</option>
+        </select>
+        <!-- <button class="btn" id="fixOver">Fix</button> -->
+
+    </div>
+    <br>
+<button class="btn" id="toss">Toss</button>&emsp;&emsp;&emsp;
+<div class="modal" id="tossWin">
+    <button class="close" id="twClose">x</button><br>
+    You Won the Toss! <br> <br>
+    <input type="radio" id="Bat" name="choose" value="Bat" checked>
+    <label for="Bat">BAT</label>
+    <input type="radio" id="Bowl" name="choose" value="Bowl">
+    <label for="Bowl">BOWL</label>
+    <button class="btn" onclick="getUserChoice()">Choose</button>
+</div>
+<div class="modal" id="tossLose">
+    <button class='close' id='tlClose'>x</button> 
+    <div id="msg"></div>
+</div>
+
+    <button class="btn" disabled id="start" style="visibility:visible;">Start</button>
+    <script src="logic.js"></script>
+    <!-- <script src="games.js"></script> -->
+</body>
+</html>
